@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
 import { Button, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./home.css"; 
+import "./home.css";
 
 const Home = () => {
   return (
@@ -30,8 +30,11 @@ const Home = () => {
 
       <br />
       <br />
-      <main style={{ display: "flex", justifyContent: "center", gap: "2rem" }}>
-        <Button as={Link} to="/Resume" variant="primary">
+      <main
+        className="d-flex justify-content-center gap-2"
+        style={{ flexWrap: "wrap" }}
+      >
+        <Button as={Link} to="/Resume" variant="primary" className="btn-lg">
           Create a Resume
         </Button>
       </main>

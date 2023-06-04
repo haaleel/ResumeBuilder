@@ -106,7 +106,8 @@ const Experience = ({ prevStep, nextStep }) => {
   return (
     <div className="p-3">
       <Card className="padding">
-        <Card.Title className="text-center">Experience Details</Card.Title>
+      <Card.Header className="text-center" as="h5">
+          Experience Details</Card.Header>
         <Card.Body>
           <div className="margin">
             {formValues.experiences &&
@@ -189,14 +190,14 @@ const Experience = ({ prevStep, nextStep }) => {
             </Button>
           </div>
         </Card.Body>
-        <Container className="margin">
-          <Row className="justify-content-center">
-            <Col xs={6} sm={4} md={2}>
+        <Container className="mt-3 mb-3"> {/* Add "mb-3" class for bottom margin */}
+          <Row>
+            <Col xs={6}>
               <Button variant="secondary" onClick={goBack}>
                 Back
               </Button>
             </Col>
-            <Col xs={6} sm={4} md={2}>
+            <Col xs={5}>
               <Button variant="secondary" onClick={continueStep}>
                 Next
               </Button>

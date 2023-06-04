@@ -109,7 +109,8 @@ const Education = ({ prevStep, nextStep }) => {
   return (
     <div className="p-3">
       <Card className="padding">
-        <Card.Title className="text-center">Education Details</Card.Title>
+      <Card.Header className="text-center" as="h5">
+          Education Details</Card.Header>
         <Card.Body>
           <div className="margin">
             {formValues.colleges && formValues.colleges.map((college, index) => (
@@ -192,14 +193,14 @@ const Education = ({ prevStep, nextStep }) => {
             </Button>
           </div>
         </Card.Body>
-        <Container className="margin">
-          <Row className="justify-content-center">
-            <Col xs={6} sm={4} md={2}>
+        <Container className="mt-3 mb-3">
+          <Row >
+            <Col xs={6}  >
               <Button variant="secondary" onClick={goBack}>
                 Back
               </Button>
             </Col>
-            <Col xs={6} sm={4} md={2}>
+            <Col xs={5}  >
               <Button variant="secondary" onClick={continueStep}>
                 Next
               </Button>

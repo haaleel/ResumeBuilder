@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setSkillsData } from '../componets/redux-store/dataReducer';
 import Autosuggest from 'react-autosuggest';
 import { Button, Col, Container, Row, Alert, Card } from 'react-bootstrap';
@@ -107,7 +107,8 @@ const Skills = ({ prevStep }) => {
     return (
         <Container>
             <Card>
-                <h1 className="mb-4 text-center">Skills</h1>
+                <Card.Header className="text-center" as="h5">
+                    Skills</Card.Header>
                 {skills.map((skill, index) => (
                     <Row className="form-group justify-content-center align-items-center" key={index}>
                         <Col xs={10} md={6}>
@@ -122,21 +123,21 @@ const Skills = ({ prevStep }) => {
                                 onSuggestionSelected={onSuggestionSelected}
                             />
                         </Col>
-                        <Col xs={2} md={1}>
-                            <Button
-                                variant="danger"
-                                size="sm"
-                                className="mt-2"
-                                onClick={() => handleRemoveSkill(index)}
-                            >
-                                Remove Skill
-                            </Button>
-                        </Col>
+
+                        <Button
+                            variant="danger"
+                            size="sm"
+                            className="mt-2 btn-custom"
+                            onClick={() => handleRemoveSkill(index)}
+                        >
+                            delete
+                        </Button>
+
                     </Row>
                 ))}
                 {skills.length < 10 && (
                     <Row className="justify-content-center">
-                        <Col xs={12} md={6}>
+                        <Col xs={25} md={25}>
                             <Button variant="secondary" onClick={handleAddSkill} block>
                                 Add Skill
                             </Button>
