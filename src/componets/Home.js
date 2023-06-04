@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
 import { Button, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./home.css";
+import "./home.css"; 
 
 const Home = () => {
   return (
-    <div className="cool-background"> 
+    <div className="cool-background">
       <NavBar />
       <Container>
         <div
@@ -27,6 +27,7 @@ const Home = () => {
           </div>
         </div>
       </Container>
+
       <br />
       <br />
       <main style={{ display: "flex", justifyContent: "center", gap: "2rem" }}>

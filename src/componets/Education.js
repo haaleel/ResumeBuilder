@@ -41,9 +41,6 @@ const Education = ({ prevStep, nextStep }) => {
     });
   };
 
-
-
-
   const addCollege = () => {
     setFormValues((prevValues) => ({
       ...prevValues,

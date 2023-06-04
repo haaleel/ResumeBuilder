@@ -13,9 +13,6 @@ const Resume = () => {
   const dispatch = useDispatch();
   const resumeData = useSelector((state) => state.data);
 
-  useEffect(() => {
-  }, []);
-
   const nextStep = () => {
     setStep(step + 1);
   };
@@ -44,7 +41,6 @@ const Resume = () => {
         break;
     }
   };
-
 
   const save = () => {
     dispatch(
