@@ -123,7 +123,7 @@ const Skills = ({ prevStep }) => {
                                 onSuggestionSelected={onSuggestionSelected}
                             />
                         </Col>
-
+                          <Col>
                         <Button
                             variant="danger"
                             size="sm"
@@ -132,7 +132,7 @@ const Skills = ({ prevStep }) => {
                         >
                             delete
                         </Button>
-
+                        </Col>
                     </Row>
                 ))}
                 {skills.length < 10 && (
