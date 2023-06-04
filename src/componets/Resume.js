@@ -3,28 +3,17 @@ import { useDispatch, useSelector } from "react-redux";
 import NavBar from "./NavBar";
 import Profile from "./Profile";
 import Education from "./Education";
-import { setProfileData, setEducationData, setSkillsData, saveResumeData, setExperienceData } from "../componets/redux-store/dataReducer";
+
+import { setProfileData, setEducationData, setSkillsData ,saveResumeData, setExperienceData} from "../componets/redux-store/dataReducer";
 import Skills from "./Skill";
 import Experience from "./Experience";
-import { Button } from 'react-bootstrap';
-import { saveAs } from 'file-saver';
 
 const Resume = () => {
   const [step, setStep] = useState(1);
   const dispatch = useDispatch();
   const resumeData = useSelector((state) => state.data);
 
-  const handleDownload = () => {
-    // Convert resumeData to PDF format
-    // Create a Blob object from the PDF data
-    const blob = new Blob([resumeData], { type: 'application/pdf' });
-
-    // Use file-saver library to save the blob as a file
-    saveAs(blob, 'resume.pdf');
-  };
-
   useEffect(() => {
-    // Fetch resume data from Redux store or an API endpoint if needed
   }, []);
 
   const nextStep = () => {
@@ -36,7 +25,6 @@ const Resume = () => {
   };
 
   const handleChange = (e) => {
-    // Update the corresponding data in the Redux store based on the input changes
     const { name, value } = e.target;
 
     switch (step) {
@@ -59,7 +47,6 @@ const Resume = () => {
 
 
   const save = () => {
-    // Dispatch an action to save the resume data in Redux store
     dispatch(
       saveResumeData({
         profile: resumeData.profile,
@@ -139,19 +126,7 @@ const Resume = () => {
         </div>
       );
     default:
-      return (
-        <div>
-          <NavBar />
-          <div className="App mt-3">
-            <div className="container col-lg-10 mx-auto text-center">
-              {/* Your resume content goes here */}
-              <Button variant="primary" onClick={handleDownload}>
-                Download as PDF
-              </Button>
-            </div>
-          </div>
-        </div>
-      );
+      return <div />;
   }
 };
 

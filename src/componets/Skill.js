@@ -7,9 +7,6 @@ import HandleDownload from './HandleDownloadPdf ';
 
 const Skills = ({ prevStep }) => {
     const dispatch = useDispatch();
-    const resumeData = useSelector((state) => state.data);
-    console.log("🚀 ~ file: Skill.js:13 ~ Skills ~ resumeData:", resumeData)
-
     const [open, setOpen] = useState(false);
 
     const [skills, setSkills] = useState(['']);

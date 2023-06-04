@@ -26,7 +26,7 @@ const Education = ({ prevStep, nextStep }) => {
 
   const handleChange = (e, index) => {
     const { name, value } = e.target;
-    const fieldName = name.split('-')[0]; // Extract the field name from the input name
+    const fieldName = name.split('-')[0];
     setFormValues((prevValues) => {
       const updatedColleges = prevValues.colleges.map((college, i) => {
         if (i === index) {
